@@ -1,0 +1,37 @@
+<section class="container">
+    <h1 class="text-center">Cadastro de Funcionários</h1>
+    <form action="/funcionario/store" method="post">
+        {{!-- Campo 1: Nome --}}
+        <section class="mb-2">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control">
+        </section>
+
+        {{!-- CAMPO 2: SALÁRIO E CARGO --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="salario">Salário</label>
+                <input type="text" name="salario" id="salario" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo" id="cargo" class="form-control">
+            </div>
+        </section>
+        {{!-- CAMPO 3 - SELECIONAR CÓDIGO DO DEPARTAMENTO --}}
+        <section class="mb-2">
+            <label for="departamento">Escolha o departamento do funcionário</label>
+            <select name="departamento" id="departamento" class="form-select">
+                <option value="">Escolha uma opção...</option>
+                <option value="1">Recursos Humanos</option>
+                <option value="2">Financeiro</option>
+            </select>
+        </section>
+
+        {{!-- CAMPO 4: BOTÃO DE CADASTRAR --}}
+        <section class="mb-2 d-flex justify-content-end">
+            <button class="btn btn-primary" type="submit">Cadastrar</button>
+        </section>
+    </form>
+</section>
