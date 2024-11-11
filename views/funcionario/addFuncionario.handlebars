@@ -24,8 +24,10 @@
             <label for="departamento">Escolha o departamento do funcionário</label>
             <select name="departamento" id="departamento" class="form-select">
                 <option value="">Escolha uma opção...</option>
-                <option value="1">Recursos Humanos</option>
-                <option value="2">Financeiro</option>
+                {{#each dados}}
+                <option value="{{dataValues.id}}">{{dataValues.nome}}</option>
+                {{/each}}
+
             </select>
         </section>
 
